@@ -259,7 +259,7 @@
                 <tr>
                     <td><strong>Foreground Package Name</strong><br><code>com.instagram.android</code></td>
                     <td>To detect when the Instagram app is opened so Pulo can present the blocker screen or timer overlay.</td>
-                    <td><strong>Evaluated Locally On-Device</strong> — Real-time event evaluation on your device. Package detection events are not logged to disk or sent to external servers.</td>
+                    <td><strong>Evaluated Locally On-Device</strong> — Real-time event evaluation on your device. The service evaluates the foreground package name of window events locally, acts only when it equals com.instagram.android, and does not log or transmit it.</td>
                 </tr>
                 <tr>
                     <td><strong>Window State Changes</strong><br><code>TYPE_WINDOW_STATE_CHANGED</code></td>
@@ -275,7 +275,7 @@
                 <li><strong>No Content Inspection:</strong> As configured in <code>accessibility_service_config.xml</code> (<code>canRetrieveWindowContent="false"</code>), Pulo cannot and does not read, view, or extract on-screen text, images, or chat messages.</li>
                 <li><strong>No Keylogging or Input Monitoring:</strong> Pulo does not monitor keypresses, typing, form inputs, or passwords.</li>
                 <li><strong>No Interception of Communications:</strong> Pulo does not read or intercept chat messages, emails, or personal data.</li>
-                <li><strong>Targeted Package Restriction:</strong> The accessibility service target package is configured strictly for <code>com.instagram.android</code> in <code>accessibility_service_config.xml</code>. No other application package activity is monitored.</li>
+                <li><strong>Package Filtering in Code:</strong> The Accessibility Service receives window state change events from the Android system, which include the package name of the app that opened a window. Pulo immediately discards events from every app except the official Instagram app (com.instagram.android). Package names of other apps are not stored, logged, or transmitted anywhere.</li>
             </ul>
         </div>
     </section>
@@ -405,7 +405,10 @@
         <p>Pulo requests the following Android system permissions:</p>
         <ul>
             <li>
-                <code>android.permission.INTERNET</code>: Required to load web interfaces for Instagram and YouTube within WebViews, transmit analytics events to Google Firebase Analytics, and launch third-party payment/UPI applications when requested.
+                <code>android.permission.INTERNET</code>: Required to load web interfaces for Instagram and YouTube within WebViews, and transmit analytics events to Google Firebase Analytics.
+            </li>
+            <li>
+                <code>android.permission.ACCESS_NETWORK_STATE</code>: Used by the Firebase Analytics SDK to check network connectivity before sending analytics events.
             </li>
             <li>
                 <code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>: Required for the optional Blocker Accessibility Service to detect when the native Instagram app is opened in order to display the blocker shield or timer overlay.
@@ -413,24 +416,9 @@
         </ul>
     </section>
 
-    <!-- SECTION 6: PAYMENTS & SUPPORT -->
+    <!-- SECTION 6: DATA CONTROL, RETENTION & DELETION -->
     <section class="card">
-        <h2>6. Voluntary App Support & Payment Data</h2>
-        <p>
-            Pulo is completely free, contains no ads, and requires no paid subscriptions. It offers an optional "Support Pulo" contribution option.
-        </p>
-        <p>
-            If you choose to support the app via UPI, Pulo triggers a standard Android Intent (<code>upi://pay</code>) or displays a static QR code that hands off the payment request to an installed UPI payment app (e.g., Google Pay, PhonePe, Paytm).
-        </p>
-        <ul>
-            <li>Pulo <strong>does not process, collect, or store</strong> bank account details, UPI PINs, credit card numbers, or financial transaction histories.</li>
-            <li>All financial transaction processing is handled securely and exclusively by your selected payment provider and bank.</li>
-        </ul>
-    </section>
-
-    <!-- SECTION 7: DATA CONTROL, RETENTION & DELETION -->
-    <section class="card">
-        <h2>7. Data Control, Retention, and Deletion</h2>
+        <h2>6. Data Control, Retention, and Deletion</h2>
         <p>
             You have options to manage local data stored on your device:
         </p>
@@ -444,25 +432,25 @@
         </ul>
     </section>
 
-    <!-- SECTION 8: CHILDREN'S PRIVACY -->
+    <!-- SECTION 7: CHILDREN'S PRIVACY -->
     <section class="card">
-        <h2>8. Children's Privacy</h2>
+        <h2>7. Children's Privacy</h2>
         <p>
             Pulo is a general utility digital wellbeing app. It does not knowingly collect or solicit personal information from children under the age of 13 (or applicable digital consent age). Technical analytics collected via Google Firebase Analytics are limited to app engagement metrics and device information handled under Google's privacy standards.
         </p>
     </section>
 
-    <!-- SECTION 9: CHANGES TO THIS POLICY -->
+    <!-- SECTION 8: CHANGES TO THIS POLICY -->
     <section class="card">
-        <h2>9. Changes to This Privacy Policy</h2>
+        <h2>8. Changes to This Privacy Policy</h2>
         <p>
             We may update our Privacy Policy from time to time to reflect app changes or legal/regulatory updates. Updates will be posted on this page with a revised "Last Updated" date.
         </p>
     </section>
 
-    <!-- SECTION 10: CONTACT INFORMATION -->
+    <!-- SECTION 9: CONTACT INFORMATION -->
     <section class="card">
-        <h2>10. Contact Us</h2>
+        <h2>9. Contact Us</h2>
         <p>
             If you have questions, concerns, or feedback regarding this Privacy Policy or Pulo's privacy practices, please contact us at:
         </p>
