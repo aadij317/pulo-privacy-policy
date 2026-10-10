@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pulo — Stop the Scroll</title>
+    <style>
+        :root {
+            --primary-color: #6E51E2;
+            --primary-light: #E8E3FF;
+            --accent-green: #34C759;
+            --accent-red: #FF4E61;
+            --text-main: #1F2937;
+            --text-muted: #4B5563;
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --border-color: #E2E8F0;
+            --radius: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #8B72F8;
+                --primary-light: #2A2342;
+                --accent-green: #30D158;
+                --accent-red: #FF4E61;
+                --text-main: #F3F4F6;
+                --text-muted: #9CA3AF;
+                --bg-body: #0F172A;
+                --bg-card: #1E293B;
+                --border-color: #334155;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .app-badge {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 18px 0 8px 0;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        p.subtext {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .callout {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--primary-color);
+        }
+
+        .callout-warning {
+            background-color: rgba(255, 78, 97, 0.1);
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .callout-warning .callout-title {
+            color: var(--accent-red);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        code {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        .contact-box {
+            background-color: var(--primary-light);
+            border: 1px dashed var(--primary-color);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .contact-email {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            word-break: break-all;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="app-badge">Digital Wellbeing App</div>
+        <h1>Privacy Policy</h1>
+        <p><strong>Pulo — Stop the Scroll</strong></p>
+        <p class="last-updated">Developer: <strong>SDN AI</strong> | Application ID: <code>com.sdnai.pulo</code></p>
+        <p class="last-updated">Last Updated: October 11, 2026</p>
+    </header>
+
+    <!-- SECTION 1: OVERVIEW -->
+    <section class="card">
+        <h2>1. Overview & Core Principles</h2>
+        <p>
+            <strong>Pulo — Stop the Scroll</strong> ("Pulo", "we", "us", or "our"), developed by <strong>SDN AI</strong> (Application ID: <code>com.sdnai.pulo</code>), is a digital wellbeing Android application designed to help users control social media consumption, prevent mindless scrolling, and maintain intentional app usage for Instagram and YouTube.
+        </p>
+        <p>
+            We are committed to clear and transparent privacy practices:
+        </p>
+        <ul>
+            <li><strong>No Custom Account Server or User Database:</strong> Pulo does not operate a custom user server or backend database. We do not require account creation, passwords, or personal profiles stored on our own backend.</li>
+            <li><strong>Firebase Analytics Integration:</strong> Pulo integrates the <strong>Google Firebase Analytics SDK</strong> to log specific custom events and collect standard usage metrics. This helps us measure feature usage, monitor app stability, and improve user experience.</li>
+            <li><strong>Local On-Device Personal Storage:</strong> Detailed personal usage tracking logs, YouTube watch history and playback positions, daily pass statuses, and cached session profiles are stored locally on your device using standard Android <code>SharedPreferences</code> and are not sent to remote servers.</li>
+        </ul>
+    </section>
+
+    <!-- SECTION 2: ACCESSIBILITY SERVICE -->
+    <section class="card">
+        <h2>2. Screen-Time Management & Accessibility Service Usage</h2>
+        <p>
+            Pulo includes an optional <strong>Blocker Accessibility Service</strong> (<code>BlockerAccessibilityService</code>) to help you manage exposure to the official Instagram application.
+        </p>
+
+        <div class="callout">
+            <div class="callout-title">Prominent Disclosure: Accessibility Service Usage</div>
+            <p>
+                <strong>Why Pulo requires the Accessibility Service permission:</strong><br>
+                When explicitly enabled by the user, the Accessibility Service detects when the official Instagram application (<code>com.instagram.android</code>) opens a window on your device. When Instagram opens, Pulo displays a full-screen shield overlay encouraging you to use Pulo's focused messaging interface or activate one of your daily pass limits (a 5-minute or 1-minute pass). If an active pass is running, Pulo displays an overlay timer over Instagram.
+            </p>
+        </div>
+
+        <h3>Scope of Data Processed by Accessibility Service</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data / Event</th>
+                    <th>Purpose</th>
+                    <th>Processing & Transmission</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Foreground Package Name</strong><br><code>com.instagram.android</code></td>
+                    <td>To detect when the Instagram app is opened so Pulo can present the blocker screen or timer overlay.</td>
+                    <td><strong>Evaluated Locally On-Device</strong> — Real-time event evaluation on your device. Package detection events are not logged to disk or sent to external servers.</td>
+                </tr>
+                <tr>
+                    <td><strong>Window State Changes</strong><br><code>TYPE_WINDOW_STATE_CHANGED</code></td>
+                    <td>To trigger the blocking shield overlay when an Instagram window appears.</td>
+                    <td><strong>Evaluated Locally On-Device</strong> — Processed purely in memory on-device to present UI overlays.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <div class="callout-title">Accessibility Service Technical Boundaries</div>
+            <ul>
+                <li><strong>No Content Inspection:</strong> As configured in <code>accessibility_service_config.xml</code> (<code>canRetrieveWindowContent="false"</code>), Pulo cannot and does not read, view, or extract on-screen text, images, or chat messages.</li>
+                <li><strong>No Keylogging or Input Monitoring:</strong> Pulo does not monitor keypresses, typing, form inputs, or passwords.</li>
+                <li><strong>No Interception of Communications:</strong> Pulo does not read or intercept chat messages, emails, or personal data.</li>
+                <li><strong>Targeted Package Restriction:</strong> The accessibility service target package is configured strictly for <code>com.instagram.android</code> in <code>accessibility_service_config.xml</code>. No other application package activity is monitored.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION 3: DATA ACCESS, LOCAL STORAGE & FIREBASE ANALYTICS -->
+    <section class="card">
+        <h2>3. Local Storage & Firebase Analytics Data Collection</h2>
+        <p>
+            Pulo handles data in two distinct ways: local storage on your device for core features, and external analytics logging via Google Firebase Analytics for app usage statistics.
+        </p>
+
+        <h3>A. Local On-Device Data Storage (SharedPreferences)</h3>
+        <p>
+            The following personal usage information is stored exclusively on your device using Android <code>SharedPreferences</code> and is <strong>never transmitted to external servers or included in analytics calls</strong>:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Category</th>
+                    <th>Specific Items Stored Locally</th>
+                    <th>Storage Mechanism</th>
+                    <th>Purpose & Control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>App Usage Statistics</strong></td>
+                    <td>
+                        • Session start timestamps<br>
+                        • Planned session duration (Instagram)<br>
+                        • Actual time spent on screen per session<br>
+                        • Daily & weekly session counts
+                    </td>
+                    <td>Android <code>SharedPreferences</code> (<code>onlydm_usage</code>).</td>
+                    <td>Stored on-device to render self-reflection usage charts in the app.</td>
+                </tr>
+                <tr>
+                    <td><strong>YouTube Watch History & Resume Points</strong></td>
+                    <td>
+                        • Video ID & video title<br>
+                        • Playback position (seconds) & video duration<br>
+                        • Last watched timestamp
+                    </td>
+                    <td>Android <code>SharedPreferences</code> (<code>onlydm_watch</code>, capped at 100 items).</td>
+                    <td>Stored on-device to allow resuming videos from where you left off. Can be deleted item-by-item in-app.</td>
+                </tr>
+                <tr>
+                    <td><strong>Daily Passes</strong></td>
+                    <td>
+                        • Current date string (<code>yyyy-MM-dd</code>)<br>
+                        • Usage status flags for 5-minute and 1-minute passes<br>
+                        • Pass expiration timestamp
+                    </td>
+                    <td>Android <code>SharedPreferences</code> (<code>onlydm_passes</code>).</td>
+                    <td>Stored on-device to enforce daily pass limits. Automatically resets daily based on local clock.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cached Session & Web Profiles</strong></td>
+                    <td>
+                        • Instagram user ID to username mapping (<code>uname_$id</code>)<br>
+                        • Active session timer state
+                    </td>
+                    <td>Android <code>SharedPreferences</code> (<code>onlydm_ig_session</code>).</td>
+                    <td>Stored on-device for quick profile navigation shortcuts and active session recovery.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>B. Analytics Transmitted to Google Firebase Analytics</h3>
+        <p>
+            Pulo integrates <strong>Google Firebase Analytics</strong> (project: <em>Pulo Analytics</em>). When you use Pulo, certain custom app event logs and standard SDK telemetry are transmitted to Google Firebase servers.
+        </p>
+
+        <h4>Custom Events Implemented in Code</h4>
+        <p>The following custom events are explicitly logged in the application code via <code>AnalyticsHelper</code>:</p>
+        <ul>
+            <li><code>instagram_session_start</code>: Logged when an Instagram session begins. Parameter: <code>planned_minutes</code> (integer representing selected session limit).</li>
+            <li><code>youtube_session_start</code>: Logged when the YouTube screen is opened. No custom parameters are sent with this event.</li>
+            <li><code>timer_completed</code>: Logged when a session timer expires. Parameter: <code>timer_type</code> (string value: <code>"instagram_session"</code> or <code>"accessibility_pass"</code>).</li>
+            <li><code>protection_enabled</code>: Logged when the Accessibility Service connects and protection becomes active. No custom parameters are sent with this event.</li>
+        </ul>
+
+        <h4>Automatically Collected Analytics Data</h4>
+        <p>
+            In addition to custom events logged by the app code, the Google Firebase Analytics SDK automatically collects standard device and app interaction data according to official Google documentation, including:
+        </p>
+        <ul>
+            <li>Standard app lifecycle metrics (e.g., app opens, session duration, user engagement).</li>
+            <li>Device and operating system details (device model, OS version, app version, language, system locale).</li>
+            <li>Approximate location information derived from device IP addresses by Google servers during network requests.</li>
+        </ul>
+
+        <div class="callout">
+            <div class="callout-title">Clear Separation: Local Data vs. Firebase Analytics</div>
+            <p>
+                <strong>What remains on your device vs. what goes to Firebase:</strong><br>
+                • <strong>Local Only:</strong> Specific YouTube video titles, video IDs, video playback positions, exact session time logs, pass reset dates, and cached Instagram usernames remain <em>strictly on your local device</em> in SharedPreferences and are never sent to Firebase.<br>
+                • <strong>Sent to Firebase:</strong> Custom event names and their parameters (listed above) and standard Firebase SDK diagnostic telemetry are transmitted to Google Firebase Analytics servers.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WEBVIEWS & THIRD-PARTY SERVICES -->
+    <section class="card">
+        <h2>4. Embedded WebViews & Interaction with Third-Party Platforms</h2>
+        <p>
+            Pulo embeds standard Android <code>WebView</code> components to provide a curated, distraction-free interface for Instagram (<code>InstagramActivity</code>) and YouTube (<code>YouTubeActivity</code>).
+        </p>
+
+        <h3>How WebViews Function in Pulo:</h3>
+        <ul>
+            <li><strong>Direct Host Communication:</strong> When you access Instagram or YouTube within Pulo, your device connects directly to official servers owned by Meta Platforms, Inc. (<code>instagram.com</code>) and Google LLC (<code>youtube.com</code> / <code>google.com</code>).</li>
+            <li><strong>Credentials & Authentication:</strong> When logging into Instagram or YouTube, credentials (username, password, or two-factor authentication tokens) are entered directly into official web forms. <strong>Pulo does not read, store, or transmit your credentials.</strong></li>
+            <li><strong>Cookie Management:</strong> HTTP cookies are managed directly by Android's system <code>CookieManager</code> to maintain web sessions. Pulo does not extract or transmit these cookies.</li>
+            <li><strong>Script & Layout Customization:</strong> Pulo injects client-side JavaScript and CSS into the WebView strictly to customize page layouts (e.g., hiding recommendations, hiding algorithmic feeds, blocking endless reel swiping, and displaying navigation buttons). This code executes entirely within your local browser engine.</li>
+        </ul>
+
+        <p class="subtext">
+            Your interactions with Instagram and YouTube via Pulo are governed by the Privacy Policies and Terms of Service of <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener">Meta/Instagram</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google/YouTube</a>.
+        </p>
+    </section>
+
+    <!-- SECTION 5: PERMISSIONS -->
+    <section class="card">
+        <h2>5. Android Permissions Required</h2>
+        <p>Pulo requests the following Android system permissions:</p>
+        <ul>
+            <li>
+                <code>android.permission.INTERNET</code>: Required to load web interfaces for Instagram and YouTube within WebViews, transmit analytics events to Google Firebase Analytics, and launch third-party payment/UPI applications when requested.
+            </li>
+            <li>
+                <code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>: Required for the optional Blocker Accessibility Service to detect when the native Instagram app is opened in order to display the blocker shield or timer overlay.
+            </li>
+        </ul>
+    </section>
+
+    <!-- SECTION 6: PAYMENTS & SUPPORT -->
+    <section class="card">
+        <h2>6. Voluntary App Support & Payment Data</h2>
+        <p>
+            Pulo is completely free, contains no ads, and requires no paid subscriptions. It offers an optional "Support Pulo" contribution option.
+        </p>
+        <p>
+            If you choose to support the app via UPI, Pulo triggers a standard Android Intent (<code>upi://pay</code>) or displays a static QR code that hands off the payment request to an installed UPI payment app (e.g., Google Pay, PhonePe, Paytm).
+        </p>
+        <ul>
+            <li>Pulo <strong>does not process, collect, or store</strong> bank account details, UPI PINs, credit card numbers, or financial transaction histories.</li>
+            <li>All financial transaction processing is handled securely and exclusively by your selected payment provider and bank.</li>
+        </ul>
+    </section>
+
+    <!-- SECTION 7: DATA CONTROL, RETENTION & DELETION -->
+    <section class="card">
+        <h2>7. Data Control, Retention, and Deletion</h2>
+        <p>
+            You have options to manage local data stored on your device:
+        </p>
+        <ul>
+            <li><strong>In-App Deletion:</strong> You can delete individual entries from your YouTube Watch History directly from the YouTube history panel by tapping the delete icon next to any video entry.</li>
+            <li><strong>Local Data Erasure:</strong> You can clear all local app logs, watch history, daily pass states, and cached web profiles at any time via Android device settings:
+                <br><code>Settings &gt; Apps &gt; Pulo &gt; Storage &gt; Clear Data / Clear Storage</code>.
+            </li>
+            <li><strong>Uninstalling Pulo:</strong> Uninstalling the app permanently removes all local files, preferences, and <code>SharedPreferences</code> stored by Pulo on your device.</li>
+            <li><strong>Analytics Data Retention:</strong> Analytics event data sent to Google Firebase Analytics is retained according to project settings configured in Google Firebase Console and Google's standard data retention policies.</li>
+        </ul>
+    </section>
+
+    <!-- SECTION 8: CHILDREN'S PRIVACY -->
+    <section class="card">
+        <h2>8. Children's Privacy</h2>
+        <p>
+            Pulo is a general utility digital wellbeing app. It does not knowingly collect or solicit personal information from children under the age of 13 (or applicable digital consent age). Technical analytics collected via Google Firebase Analytics are limited to app engagement metrics and device information handled under Google's privacy standards.
+        </p>
+    </section>
+
+    <!-- SECTION 9: CHANGES TO THIS POLICY -->
+    <section class="card">
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>
+            We may update our Privacy Policy from time to time to reflect app changes or legal/regulatory updates. Updates will be posted on this page with a revised "Last Updated" date.
+        </p>
+    </section>
+
+    <!-- SECTION 10: CONTACT INFORMATION -->
+    <section class="card">
+        <h2>10. Contact Us</h2>
+        <p>
+            If you have questions, concerns, or feedback regarding this Privacy Policy or Pulo's privacy practices, please contact us at:
+        </p>
+        <div class="contact-box">
+            <p><strong>Pulo Support</strong></p>
+            <p class="contact-email"><a href="mailto:pulo.support@gmail.com" style="color: var(--primary-color); text-decoration: underline;">pulo.support@gmail.com</a></p>
+            <p class="subtext" style="margin-top: 8px;">Developer: <strong>SDN AI</strong></p>
+            <p class="subtext">Application ID: <code>com.sdnai.pulo</code></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pulo — Stop the Scroll (SDN AI). All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
